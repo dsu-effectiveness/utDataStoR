@@ -331,9 +331,8 @@ Graduate students less than 9 credit hours.</li>
 <p>Residency is the state the student is a resident of as listed in the
 system of record. The options are:</p>
 <ul>
-<li>Resident</li>
-<li>Non-Resident</li>
-<li>Good Neighbor</li>
+<li>In-state residency</li>
+<li>Out-of-state residency</li>
 </ul>
 </div>
 <div class="section level3">
@@ -395,7 +394,7 @@ semester. If TRUE then the student is an athlete.</p>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>       a.level_desc,</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>       a.primary_level_class_desc,</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>       a.full_time_part_time_code,</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>       a.residency_code_desc,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>       a.residency_in_state_desc,</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>       <span class="cf">CASE</span></span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>           <span class="cf">WHEN</span> a.student_type_code <span class="op">=</span> <span class="st">'H'</span> <span class="cf">THEN</span> <span class="kw">TRUE</span></span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>           <span class="cf">ELSE</span> <span class="kw">FALSE</span></span>
@@ -404,24 +403,21 @@ semester. If TRUE then the student is an athlete.</p>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>           <span class="cf">WHEN</span> a.student_type_code <span class="op">=</span> <span class="st">'P'</span> <span class="cf">THEN</span> <span class="kw">TRUE</span></span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>           <span class="cf">ELSE</span> <span class="kw">FALSE</span></span>
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">END</span> <span class="kw">AS</span> is_non_matriculated,</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">CASE</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>           <span class="cf">WHEN</span> a.primary_major_campus_id <span class="op">=</span> <span class="st">'O01'</span> <span class="cf">THEN</span> <span class="st">'TRUE'</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>            <span class="cf">ELSE</span> <span class="st">'FALSE'</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>            <span class="cf">END</span> <span class="kw">AS</span> online_program_student,</span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>       <span class="cf">CASE</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>           <span class="cf">WHEN</span> a.overall_cumulative_gpa <span class="op">&lt;</span> <span class="fl">2.0</span> <span class="cf">THEN</span> <span class="st">'0_to_1.999'</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>           <span class="cf">WHEN</span> a.overall_cumulative_gpa <span class="kw">BETWEEN</span> <span class="fl">2.0</span> <span class="kw">AND</span> <span class="fl">2.499</span> <span class="cf">THEN</span> <span class="st">'2_to_2.499'</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>           <span class="cf">WHEN</span> a.overall_cumulative_gpa <span class="kw">BETWEEN</span> <span class="fl">2.5</span> <span class="kw">AND</span> <span class="fl">2.999</span> <span class="cf">THEN</span> <span class="st">'2.5_to_2.999'</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>           <span class="cf">WHEN</span> a.overall_cumulative_gpa <span class="kw">BETWEEN</span> <span class="fl">3.0</span> <span class="kw">AND</span> <span class="dv">4</span> <span class="cf">THEN</span> <span class="st">'3_to_4'</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>           <span class="cf">ELSE</span> <span class="st">'new'</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>        <span class="cf">END</span> <span class="kw">AS</span> gpa_band,</span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>       a.is_pell_eligible,</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>       a.is_athlete</span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> export.student_term_level a</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>  <span class="kw">LEFT</span> <span class="kw">JOIN</span> export.academic_programs b <span class="kw">ON</span> b.program_id <span class="op">=</span> a.primary_program_id</span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a> <span class="kw">WHERE</span> a.is_enrolled <span class="kw">IS</span> <span class="kw">TRUE</span></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>   <span class="kw">AND</span> a.is_primary_level <span class="kw">IS</span> <span class="kw">TRUE</span></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>   <span class="kw">AND</span> a.is_current_term <span class="kw">IS</span> <span class="kw">TRUE</span>;</span></code></pre></div>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>       a.is_online_program_student,</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>       <span class="cf">CASE</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>           <span class="cf">WHEN</span> a.overall_cumulative_gpa <span class="op">&lt;</span> <span class="fl">2.0</span> <span class="cf">THEN</span> <span class="st">'0_to_1.999'</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>           <span class="cf">WHEN</span> a.overall_cumulative_gpa <span class="kw">BETWEEN</span> <span class="fl">2.0</span> <span class="kw">AND</span> <span class="fl">2.499</span> <span class="cf">THEN</span> <span class="st">'2_to_2.499'</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>           <span class="cf">WHEN</span> a.overall_cumulative_gpa <span class="kw">BETWEEN</span> <span class="fl">2.5</span> <span class="kw">AND</span> <span class="fl">2.999</span> <span class="cf">THEN</span> <span class="st">'2.5_to_2.999'</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>           <span class="cf">WHEN</span> a.overall_cumulative_gpa <span class="kw">BETWEEN</span> <span class="fl">3.0</span> <span class="kw">AND</span> <span class="dv">4</span> <span class="cf">THEN</span> <span class="st">'3_to_4'</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>           <span class="cf">ELSE</span> <span class="st">'new'</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">END</span> <span class="kw">AS</span> gpa_band,</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>       a.is_pell_eligible,</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>       a.is_athlete</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>  <span class="kw">FROM</span> export.student_term_level a</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>  <span class="kw">LEFT</span> <span class="kw">JOIN</span> export.academic_programs b <span class="kw">ON</span> b.program_id <span class="op">=</span> a.primary_program_id</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a> <span class="kw">WHERE</span> a.is_enrolled <span class="kw">IS</span> <span class="kw">TRUE</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>   <span class="kw">AND</span> a.is_primary_level <span class="kw">IS</span> <span class="kw">TRUE</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>   <span class="kw">AND</span> a.is_current_term <span class="kw">IS</span> <span class="kw">TRUE</span>;</span></code></pre></div>
 </div>
 </div>
 <div class="section level2">
