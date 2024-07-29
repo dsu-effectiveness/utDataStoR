@@ -5,64 +5,52 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="utDataStoR">
 <title>Headcount • utDataStoR</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Headcount">
-<meta property="og:description" content="utDataStoR">
-<!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Headcount">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
-    
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
-    
+
+    <nav class="navbar navbar-expand-lg fixed-top bg-light" data-bs-theme="light" aria-label="Site navigation"><div class="container">
+
     <a class="navbar-brand me-2" href="../index.html">utDataStoR</a>
 
     <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0.9000</small>
 
-    
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
-<li class="nav-item">
-  <a class="nav-link" href="../reference/index.html">Reference</a>
-</li>
+<li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="active nav-item dropdown">
-  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
-  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <a class="dropdown-item" href="../articles/full_time_equivalent.html">FTE Enrollment</a>
-    <a class="dropdown-item" href="../articles/groups.html">Groups</a>
-    <a class="dropdown-item" href="../articles/headcount.html">Headcount</a>
-    <a class="dropdown-item" href="../articles/retention.html">Retention</a>
-  </div>
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
+<li><a class="dropdown-item" href="../articles/150_percent_graduation_rate.html">150 Percent Graduation Rate</a></li>
+    <li><a class="dropdown-item" href="../articles/cohort.html">Cohort</a></li>
+    <li><a class="dropdown-item" href="../articles/full_time_equivalent.html">FTE Enrollment</a></li>
+    <li><a class="dropdown-item" href="../articles/groups.html">Groups</a></li>
+    <li><a class="dropdown-item" href="../articles/headcount.html">Headcount</a></li>
+    <li><a class="dropdown-item" href="../articles/retention.html">Retention</a></li>
+  </ul>
 </li>
       </ul>
-<form class="form-inline my-2 my-lg-0" role="search">
-        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off">
-</form>
-
-      <ul class="navbar-nav">
-<li class="nav-item">
-  <a class="external-link nav-link" href="https://github.com/dsu-effectiveness/utDataStoR/" aria-label="github">
-    <span class="fab fa fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
+<ul class="navbar-nav">
+<li class="nav-item"><form class="form-inline" role="search">
+ <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
+</form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/dsu-effectiveness/utDataStoR/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
 
-    
+
   </div>
 </nav><div class="container template-article">
 
@@ -71,10 +59,11 @@
 
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="" class="logo" alt=""><h1>Headcount</h1>
+
+      <h1>Headcount</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/dsu-effectiveness/utDataStoR/blob/HEAD/vignettes/headcount.Rmd" class="external-link"><code>vignettes/headcount.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/dsu-effectiveness/utDataStoR/blob/master/vignettes/headcount.Rmd" class="external-link"><code>vignettes/headcount.Rmd</code></a></small>
       <div class="d-none name"><code>headcount.Rmd</code></div>
     </div>
 
@@ -91,16 +80,16 @@ enrollment data for each calendar day during an academic term.</p>
 <p>Point in time headcount data returns the academic term, date, week of
 the year, the number of days to official term start date, and the total
 headcount snapshot.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> term_id,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>       <span class="dt">date</span>,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>       date_part(<span class="st">'week'</span>, <span class="dt">date</span>) <span class="op">-</span> <span class="dv">11</span> <span class="kw">AS</span> week,</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>       days_to_class_start,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>       <span class="fu">COUNT</span>(<span class="kw">DISTINCT</span> student_id) <span class="kw">AS</span> headcount</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> export.daily_enrollment</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> term_id <span class="op">=</span> <span class="st">'202340'</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="kw">AND</span> is_enrolled <span class="kw">IS</span> <span class="kw">TRUE</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> term_id, <span class="dt">date</span>, days_to_class_start</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> <span class="dt">date</span> <span class="kw">DESC</span>;</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="kw">SELECT</span> term_id,</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>       <span class="dt">date</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>       date_part(<span class="st">'week'</span>, <span class="dt">date</span>) <span class="op">-</span> <span class="dv">11</span> <span class="kw">AS</span> week,</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>       days_to_class_start,</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>       <span class="fu">COUNT</span>(<span class="kw">DISTINCT</span> student_id) <span class="kw">AS</span> headcount</span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="kw">FROM</span> export.daily_enrollment</span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="kw">WHERE</span> term_id <span class="op">=</span> <span class="st">'202340'</span></span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="kw">AND</span> is_enrolled <span class="kw">IS</span> <span class="kw">TRUE</span></span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> term_id, <span class="dt">date</span>, days_to_class_start</span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> <span class="dt">date</span> <span class="kw">DESC</span>;</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="current-headcount">Current Headcount<a class="anchor" aria-label="anchor" href="#current-headcount"></a>
@@ -112,17 +101,17 @@ active data.</p>
 <p>The current headcount may also change after the semester ends if
 official changes are made to student record such as withdrawal
 status.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>   <span class="kw">SELECT</span> a.term_desc,</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>          <span class="fu">COUNT</span>(a.sis_system_id) <span class="kw">AS</span> current_headcount</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>     <span class="kw">FROM</span> export.student_term_level_version a</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> export.term b</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>       <span class="kw">ON</span> a.term_id <span class="op">=</span> b.term_id</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">WHERE</span> a.is_enrolled <span class="kw">IS</span> <span class="kw">TRUE</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>      <span class="kw">AND</span> a.is_primary_level <span class="kw">IS</span> <span class="kw">TRUE</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>      <span class="kw">AND</span> a.version_desc <span class="op">=</span> <span class="st">'Current'</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>      <span class="kw">AND</span> DATE_PART(<span class="st">'year'</span>, NOW()) <span class="op">-</span> b.academic_year_code :: <span class="dt">INT</span> <span class="op">&lt;=</span> <span class="dv">5</span> <span class="co">-- Current term plus last 5 Years.</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a> <span class="kw">GROUP</span> <span class="kw">BY</span> a.term_desc</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a> <span class="kw">ORDER</span> <span class="kw">BY</span> a.term_desc;</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>   <span class="kw">SELECT</span> a.term_desc,</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>          <span class="fu">COUNT</span>(a.sis_system_id) <span class="kw">AS</span> current_headcount</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>     <span class="kw">FROM</span> export.student_term_level_version a</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> export.term b</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>       <span class="kw">ON</span> a.term_id <span class="op">=</span> b.term_id</span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>    <span class="kw">WHERE</span> a.is_enrolled <span class="kw">IS</span> <span class="kw">TRUE</span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>      <span class="kw">AND</span> a.is_primary_level <span class="kw">IS</span> <span class="kw">TRUE</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>      <span class="kw">AND</span> a.version_desc <span class="op">=</span> <span class="st">'Current'</span></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>      <span class="kw">AND</span> DATE_PART(<span class="st">'year'</span>, NOW()) <span class="op">-</span> b.academic_year_code :: <span class="dt">INT</span> <span class="op">&lt;=</span> <span class="dv">5</span> <span class="co">-- Current term plus last 5 Years.</span></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a> <span class="kw">GROUP</span> <span class="kw">BY</span> a.term_desc</span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a> <span class="kw">ORDER</span> <span class="kw">BY</span> a.term_desc;</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="census-headcount">Census Headcount<a class="anchor" aria-label="anchor" href="#census-headcount"></a>
@@ -131,9 +120,9 @@ status.</p>
 enrolled as of the 15th day of instruction of an academic term. Census
 headcount is based on snapshot data, this headcount returns a static
 headcount and is used for reporting.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">..</span>.</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">AND</span> a.version_desc <span class="op">=</span> <span class="st">'Census'</span> <span class="co">--Version description of snapshot status.</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="op">..</span>.</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="op">..</span>.</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="kw">AND</span> a.version_desc <span class="op">=</span> <span class="st">'Census'</span> <span class="co">--Version description of snapshot status.</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="op">..</span>.</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="end-of-term-headcount">End of Term Headcount<a class="anchor" aria-label="anchor" href="#end-of-term-headcount"></a>
@@ -142,9 +131,9 @@ headcount and is used for reporting.</p>
 enrolled at the end of the semester and after the high school concurrent
 enrollment grades are entered. Based on snapshot data, this headcount
 returns a static headcount and is used for reporting.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">..</span>.</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">AND</span> a.version_desc <span class="op">=</span> <span class="st">'End of Term'</span> <span class="co">--Version description of snapshot status.</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="op">..</span>.</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="op">..</span>.</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="kw">AND</span> a.version_desc <span class="op">=</span> <span class="st">'End of Term'</span> <span class="co">--Version description of snapshot status.</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="op">..</span>.</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="ipeds-fall-enrollment-headcount">IPEDS Fall Enrollment Headcount<a class="anchor" aria-label="anchor" href="#ipeds-fall-enrollment-headcount"></a>
@@ -152,9 +141,9 @@ returns a static headcount and is used for reporting.</p>
 <p>The Fall Enrollment survey is based on a snapshot of Utah Tech’s
 unduplicated Fall census enrollment headcount and is used for reporting
 annual IPEDS Fall Enrollment.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">..</span>.</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">AND</span> a.version_desc <span class="op">=</span> <span class="st">'Census'</span> <span class="co">--Version description of snapshot status.</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="op">..</span>.</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="op">..</span>.</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="kw">AND</span> a.version_desc <span class="op">=</span> <span class="st">'Census'</span> <span class="co">--Version description of snapshot status.</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="op">..</span>.</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="ipeds-12-month-enrollment-headcount">IPEDS 12 Month Enrollment Headcount<a class="anchor" aria-label="anchor" href="#ipeds-12-month-enrollment-headcount"></a>
@@ -162,17 +151,17 @@ annual IPEDS Fall Enrollment.</p>
 <p>The purpose of the 12-month Enrollment component of IPEDS is to
 collect unduplicated census enrollment counts of all students enrolled
 for credit and instructional activity data a 12-month period.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">SELECT</span> b.academic_year_code,</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>         <span class="fu">COUNT</span>(<span class="kw">DISTINCT</span> a.sis_system_id)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>     <span class="kw">FROM</span> export.student_term_level_version a</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> export.term b</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>       <span class="kw">ON</span> a.term_id <span class="op">=</span> b.term_id</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">WHERE</span> a.is_enrolled <span class="op">=</span> <span class="kw">TRUE</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>      <span class="kw">AND</span> a.is_primary_level <span class="op">=</span> <span class="kw">TRUE</span></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>      <span class="kw">AND</span> a.version_desc <span class="op">=</span> <span class="st">'Census'</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>      <span class="kw">AND</span> b.academic_year_code <span class="op">=</span> <span class="st">'2022'</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>      <span class="kw">AND</span> b.season <span class="op">!=</span> <span class="st">'Summer'</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a> <span class="kw">GROUP</span> <span class="kw">BY</span> academic_year_code;</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>  <span class="kw">SELECT</span> b.academic_year_code,</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>         <span class="fu">COUNT</span>(<span class="kw">DISTINCT</span> a.sis_system_id)</span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>     <span class="kw">FROM</span> export.student_term_level_version a</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> export.term b</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>       <span class="kw">ON</span> a.term_id <span class="op">=</span> b.term_id</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>    <span class="kw">WHERE</span> a.is_enrolled <span class="op">=</span> <span class="kw">TRUE</span></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>      <span class="kw">AND</span> a.is_primary_level <span class="op">=</span> <span class="kw">TRUE</span></span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>      <span class="kw">AND</span> a.version_desc <span class="op">=</span> <span class="st">'Census'</span></span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>      <span class="kw">AND</span> b.academic_year_code <span class="op">=</span> <span class="st">'2022'</span></span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a>      <span class="kw">AND</span> b.season <span class="op">!=</span> <span class="st">'Summer'</span></span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a> <span class="kw">GROUP</span> <span class="kw">BY</span> academic_year_code;</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="ushe-headcount">USHE Headcount<a class="anchor" aria-label="anchor" href="#ushe-headcount"></a>
@@ -191,40 +180,38 @@ unduplicated number of students enrolled as of the 15th day of
 instruction of an academic term. Census headcount is based on snapshot
 data, this headcount returns a static headcount and may be modified to
 meet USHE reporting element criteria.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">..</span>.</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">AND</span> a.version_desc <span class="op">=</span> <span class="st">'Census'</span> <span class="co">--Version description of snapshot status.</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="op">..</span>.</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="op">..</span>.</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="kw">AND</span> a.version_desc <span class="op">=</span> <span class="st">'Census'</span> <span class="co">--Version description of snapshot status.</span></span>
+<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="op">..</span>.</span></code></pre></div>
 <p><strong>End of Term</strong>: USHE End of Term Headcount is the net
 unduplicated number of students enrolled at the end of the semester and
 after the high school concurrent enrollment grades are entered. Based on
 snapshot data, this headcount returns a static headcount and may be
 modified to meet USHE reporting element criteria.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="op">..</span>.</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">AND</span> a.version_desc <span class="op">=</span> <span class="st">'End of Term'</span> <span class="co">--Version description of snapshot status.</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="op">..</span>.</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="op">..</span>.</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="kw">AND</span> a.version_desc <span class="op">=</span> <span class="st">'End of Term'</span> <span class="co">--Version description of snapshot status.</span></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="op">..</span>.</span></code></pre></div>
 </div>
-  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
 </div>
 
 
 
     <footer><div class="pkgdown-footer-left">
-  <p></p>
-<p>Developed by Matt Nickodemus, Joy Baule, Justin Pfeifer.</p>
+  <p>Developed by Matt Nickodemus, Joy Baule, Justin Pfeifer.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.0.</p>
 </div>
 
     </footer>
 </div>
 
-  
 
-  
+
+
 
   </body>
 </html>
